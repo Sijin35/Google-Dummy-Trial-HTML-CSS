@@ -1,0 +1,230 @@
+/* Universal CSS */
+
+/* Home page (index) */
+
+/* .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(100px, auto));
+} */
+
+body {
+    margin: 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #202124;
+}
+
+footer a {
+    color: #70757a;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0px;
+}
+
+.hypertop {
+    display: inline-block;
+    padding: 2px;
+    margin: 0 5px;
+    color: #202124;
+}
+
+.topnav1 {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 14px 0 0 14px;
+    margin: 0 20px;
+}
+
+
+.topnav1:first-of-type {
+    margin-left: 2px;
+}
+
+.tn2 {
+    display: flex;
+    align-items: center;
+    padding: 14px 0 0 14px;
+}
+
+
+.topnav2 .hypers {
+    padding: 5px;
+    margin: 0 10px;
+}
+
+.topnav2 .hypers2 {
+    padding-left: 20px;
+    margin: 0 10px;
+    text-decoration: none !important;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    background-color: #d3b3b3;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 18px;
+
+}
+
+main {
+    height: auto;
+    position: absolute;
+    width: 100%;
+    top: 250;
+}
+
+.maincon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.centerDiv {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parentsearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 30%;
+    border: 1px solid #dfe1e5;
+    border-radius: 30px;
+    padding: 10px 12px;
+}
+
+.parentsearch:hover {
+    box-shadow: 0px 1px 6px rgb(32 33 36 / 28%);
+}
+
+
+
+.microphone {
+    display: flex;
+    gap: 10px;
+}
+
+.search {
+    width: 25vw;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+/* .test {
+    display: none;
+} */
+
+
+.but {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.but input {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    margin: 11px 4px;
+    padding: 0px 16px;
+    height: 36px;
+    line-height: 27px;
+    font-size: 14px;
+    color: #3c4043;
+    border-radius: 4px;
+}
+
+.but input:hover {
+    border: 1px solid rgb(32 33 36 / 28%);
+}
+
+footer {
+    position: absolute;
+    background-color: #f2f2f2;
+    bottom: 0;
+    width: 100%;
+}
+
+.loc {
+    padding: 15px 18px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 18px;
+    color: #70757a;
+}
+
+.btmnav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btmnav1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btmnav2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .hyper {
+    color: #70757a;
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+
+@media screen and (max-width:1242px) {
+    .parentsearch {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width:790px) {
+    .parentsearch {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:570px) {
+    .parentsearch {
+        width: 55%;
+    }
+}
