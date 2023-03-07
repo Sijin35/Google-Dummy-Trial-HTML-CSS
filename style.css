@@ -1,17 +1,10 @@
-/* Universal CSS */
-
-/* Home page (index) */
-
-/* .content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, minmax(100px, auto));
-} */
-
 body {
     margin: 0px auto;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    box-sizing: border-box;
+
 }
 
 .content {
@@ -37,11 +30,123 @@ a:hover {
 
 .navbar {
     display: flex;
+    position: relative;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     margin: 8px 0px;
 }
+
+.moreOption {
+    width: 19rem;
+    max-height: 350px;
+    padding: 20px 40px 0px 20px;
+
+    background-color: #fff;
+    box-shadow: 0.1em 0.1em 1.5rem rgb(32 33 36 / 28%);
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    z-index: 1;
+
+    border-radius: 0.5rem;
+    /* border: 1px solid rgb(112, 117, 122); */
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+
+    transition: all 0.5s ease;
+    display: none;
+}
+
+.show {
+    display: grid;
+    max-height: 22rem;
+}
+
+
+.moreOption>a {
+    height: 100px;
+    width: 100px;
+    padding-top: 10px;
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.moreoption>a:hover {
+    background-color: hsl(198, 72%, 93%);
+    border-radius: 10px;
+}
+
+/* Dark mode toggle */
+
+/* .toggleon {
+    display: none;
+} */
+
+.moreOption>a>.track {
+
+    position: relative;
+
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 24px;
+    width: 50px;
+    height: 20px;
+}
+
+.moreOption>a>.track>.ball {
+    width: 20px;
+    height: 10px;
+    color: #5f6368;
+    border-radius: 50%;
+
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Dark mode toggle */
+
+/* sub menu scrollbar */
+
+.moreOption::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.moreOption::-webkit-scrollbar-track {
+    background: hsl(120 100% 100% / 1);
+    margin-block: 0.4rem;
+}
+
+.moreOption::-webkit-scrollbar-thumb {
+    background: hsl(0, 6%, 80%);
+    border-radius: 100vw;
+}
+
+
+.moreOption::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 3%, 60%);
+    border-radius: 100vw;
+}
+
+/* sub menu scrollbar */
 
 .hypertop {
     display: inline-block;
@@ -64,8 +169,10 @@ a:hover {
 
 .tn2 {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 14px 0 0 14px;
+    margin-right: 1.5rem;
 }
 
 
@@ -75,10 +182,20 @@ a:hover {
 }
 
 .topnav2 .hypers2 {
-    padding-left: 20px;
     margin: 0 10px;
     text-decoration: none !important;
+    color: #5f6368;
+    cursor: pointer;
 }
+
+/* hover effect for app */
+
+/* .hypers2 .hypersapp:hover {
+    background-color: #cbcdcf;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+} */
 
 .avatar {
     display: flex;
@@ -86,12 +203,20 @@ a:hover {
     align-items: center;
     height: 35px;
     width: 35px;
-    background-color: #d3b3b3;
+    color: #fff;
+    background-color: #b18a8a;
     border-radius: 50%;
     font-weight: 600;
     font-size: 18px;
 
 }
+
+/* hover effect for avatar */
+
+/* .topnav2 .hypers2:hover {
+    border-radius: 100px;
+    color: #cbcdcf;
+} */
 
 main {
     height: auto;

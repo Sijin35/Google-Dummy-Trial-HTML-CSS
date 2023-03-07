@@ -26,13 +26,72 @@
                 <div class="tn2">
                     <a href="" class="hypers">Gmail</a>
                     <a href="" class="hypers">Images</a>
-                    <a href="" class="hypers2"><span class="material-symbols-outlined">
-                            apps
-                        </span></a>
+                    <div class="hypers2" onclick="btnToggle()">
+                        <div class="hypersapp"><span class="material-symbols-outlined">
+                                apps
+                            </span></div>
+                    </div>
                     <a href="" class="hypers2">
-                        <div class="avatar">S</div>
+                        <div class="avatar"><span class="material-symbols-outlined">
+                                account_circle
+                            </span></div>
                     </a>
                 </div>
+            </div>
+            <div class="moreOption" id="hiddenOption">
+                <a href="#"><img src="images/profile.svg" alt="Profile">
+                    <p>Profile</p>
+                    <!-- <span class="material-symbols-outlined">
+                        account_circle
+                        <p>Profile</p>
+                    </span> -->
+                </a>
+                <a href="#">
+                    <img src="images/photo-library.svg" alt="Photo Library">
+                    <p>Photo</p>
+                </a>
+                <a href="#"><span class="material-symbols-outlined">
+                        screen_share
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        query_stats
+                    </span></a>
+                <a href="#">
+                    <div class="track">
+                        <div class="ball">
+                        </div>
+                    </div>
+                    <p>Light</p>
+                    <!-- <div class="toggleoff">
+                        <img src="images/toggleoff.svg" alt="Light">
+                        <p>Light</p>
+                    </div>
+                    <div class="toggleon">
+                        <img src="images/toggleon.svg" alt="Dark">
+                        <p>Dark</p>
+                    </div> -->
+                </a>
+                <a href="#"><span class="material-symbols-outlined">
+                        settings
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        play_circle
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        pause
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        skip_next
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        refresh
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        location_on
+                    </span></a>
+                <a href="#"><span class="material-symbols-outlined">
+                        close
+                    </span></a>
             </div>
         </nav>
 
@@ -47,7 +106,7 @@
                             </span>
                         </div>
                         <!-- <input type="search" id="search" name="search" class="search" title="Search" onclick="xyz()"> -->
-                        <input type="search" id="search" name="search" class="search" title="Search">
+                        <input type="search" id="search" name="search" class="search" title="Search" autocomplete="off">
                         <div class="microphone">
 
                             <span class="material-symbols-outlined" style="cursor: pointer;">
@@ -61,7 +120,6 @@
 
                         </div>
                     </div>
-                    <!-- <div class="test" id="test">abcde</div> -->
 
 
                 </div>
@@ -93,6 +151,9 @@
             </div>
         </footer>
     </div>
+
+
+    <script src="index.js"></script>
 </body>
 
 </html>
