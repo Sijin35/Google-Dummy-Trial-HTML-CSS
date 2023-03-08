@@ -1,41 +1,51 @@
 const hiddenOption = document.getElementById('hiddenOption');
-const toggleOn = document.querySelector('toggleon');
-const toggleOff = document.querySelector('toggleoff');
-const body = document.querySelector('.content');
+const close = document.querySelector('.content');
+const body = document.querySelector('body');
+const swap = document.getElementById('switchLightDarkText');
+const profileMenu = document.getElementById('profileMenu');
 
-body.addEventListener('click', (e) => {
+
+
+close.addEventListener('click', (e) => {
     const event = e.srcElement.className;
     if (event === 'content' || event === 'navbar' || event === 'centerDiv') {
         if (hiddenOption.classList.contains('show')) {
             btnToggle();
         }
+        if (profileMenu.classList.contains('profileShow')) {
+            btnProfile();
+        }
     }
-})
+});
 
 function btnToggle() {
+    if (profileMenu.classList.contains('profileShow')) {
+        btnProfile();
+    }
     hiddenOption.classList.toggle('show');
-}
+};
 
+function dark() {
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    body.classList.toggle('darkMode');
+    if (prefersDarkScheme.matches) {
+        document.body.classList.add("dark-theme");
+    } else {
+        document.body.classList.remove("dark-theme");
+    }
 
+    // hiddenOption.classList.toggle('darkModeSubMenu');
+    if (swap.innerHTML === 'Light') {
+        swap.innerHTML = 'Dark';
+    } else {
+        swap.innerHTML = 'Light';
+    }
+};
 
-// toggleOn.addEventListener('click', () => {
-//     for (let i = 0; i > toggleOn.length; i++) {
-//         let item = toggleOn[i];
-//         item.style.display = 'none';
-//     }
-//     for (let i = 0; i > toggleOff.length; i++) {
-//         let item = toggleOff[i];
-//         item.style.display = 'block';
-//     }
-// })
-// toggleOff.addEventListener('click', () => {
-//     for (let i = 0; i > toggleOn.length; i++) {
-//         let item = toggleOn[i];
-//         item.style.display = 'block';
-//     }
-//     for (let i = 0; i > toggleOff.length; i++) {
-//         let item = toggleOff[i];
-//         item.style.display = 'none';
-//     }
-// });
+function btnProfile() {
+    if (hiddenOption.classList.contains('show')) {
+        btnToggle();
+    }
+    profileMenu.classList.toggle('profileShow');
+};
 
