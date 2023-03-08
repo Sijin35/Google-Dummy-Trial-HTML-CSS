@@ -17,3 +17,4 @@ Dummy project created to practice HTML, CSS and JavaScript. The project follows 
 - This site features dropdown submenus which can be accessed by clicking on the ':::' symbol and the avatar.
 - The first submenu has been filled with 3 clickable links and remaing unusable links to fill up space. The three links include one for profile, another for accessing a photo      library(The images used do not belong to me. Credit goes to their respective owners.), and finally a slider bar to toggle dark mode.
 - The second submenu shows a mock up of a menu with profile information.
+- This build has been completed.
